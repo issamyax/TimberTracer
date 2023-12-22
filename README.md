@@ -39,4 +39,4 @@ This Python-based model offers a comprehensive analysis of wood products, emphas
 4.  **Run the Model**: Execute the main script to initiate the analysis: 	```bash python main.py``` 
     
     
--   **Computational Notebook**: Access the [Google Colab notebook](https://linnk.com) that demonstrates the usage of the model, step-by-step analysis, and interpretation of results.
+5.   **Computational Notebook**: Access the [Google Colab notebook](https://linnk.com) that demonstrates the usage of the model, step-by-step analysis, and interpretation of results.
