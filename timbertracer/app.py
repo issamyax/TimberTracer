@@ -16,7 +16,7 @@ import config as ttdata
 
 
 def run_model(scale, shape, class_width, tolerance_g, a1, a2, b1, b2, b3, b4, a, c, alpha,
-              beta, tolerance_hfind, efficiency, loss_allocation, recycling, substitution_matrix, decay, PH, R, management_dic):
+              beta, tolerance_hfind, efficiency, loss_allocation, recycling, substitution_matrix, decay, PH, R, management_dic, K, D, CC):
 
   result_df = pd.DataFrame()
   # loop over the management interventions
@@ -41,15 +41,15 @@ def run_model(scale, shape, class_width, tolerance_g, a1, a2, b1, b2, b3, b4, a,
     # Generate list of 0s before the start of projection
     list0 = [0] * RP
     # Compute stock
-    f = total_stock_calculator(resultat_reallocation, recycling, decay, PP)
+    f = total_stock_calculator(resultat_reallocation, recycling, decay, PP, K, D, CC)
     # Compute emissions
-    f1 = total_emission_calculator(resultat_reallocation, recycling, decay, PP)
+    f1 = total_emission_calculator(resultat_reallocation, recycling, decay, PP, K, D, CC)
     # Compute energy substitution
     s1 = energy_sub(resultat_reallocation, recycling, substitution_matrix, decay, ttdata.C_CO2, PP)
     # Compute material substitution
     s3 = material_sub(resultat_reallocation, recycling, substitution_matrix, decay, ttdata.C_CO2, PP)
     # Total recycling *10
-    rec = total_recycling_calculator(resultat_reallocation, recycling, decay, PP)
+    rec = total_recycling_calculator(resultat_reallocation, recycling, decay, PP, K, D, CC)
     # Cumulative list of yearly emissions
     f2 = [0]#[s3[0]]
     for i in range(2, PP + 1):
