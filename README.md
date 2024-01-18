@@ -1,4 +1,4 @@
-# TimberTracer: A Comprehensive Framework for Lifecycle Simulation and Substitution Analysis of Harvested Wood Products.
+# TimberTracer: A Comprehensive Framework for the Evaluation of Carbon Sequestration by Forest Management and Substitution of Harvested Wood Products.
 
 ## Overview
 
