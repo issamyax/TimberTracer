@@ -92,12 +92,12 @@ def total_recycling_calculator(df, recycling_matrix, decay_matrix, n, K, D, CC):
 
   # Sum the elements at corresponding positions in the lists
   sum_result = [sum(x) for x in zip(*result_list)]
-  sum_result = [x*ttdata.K*ttdata.D*ttdata.CC*10 for x in sum_result] #10 just for the scale, to get the real results you must remove multiplication by 10
+  sum_result = [x*K*D*CC*10 for x in sum_result] #10 just for the scale, to get the real results you must remove multiplication by 10
 
   return sum_result
 
 
-def total_stock_calculator(df, recycling_matrix, decay_matrix, n):
+def total_stock_calculator(df, recycling_matrix, decay_matrix, n, K, D, CC):
     """
     This function computes the total annual stock including the product stock, the landfill stock, and the millsite stock
     """
@@ -158,12 +158,12 @@ def total_stock_calculator(df, recycling_matrix, decay_matrix, n):
     sum_result1 = [sum(x) for x in zip(*result_list1)]
 
     resultat = [sum(x) for x in zip(LF, MS, sum_result1)]
-    resultat = [x*ttdata.K*ttdata.D*ttdata.CC for x in resultat] # K: Drying, D: Density, CC: Carbon content
+    resultat = [x*K*D*CC for x in resultat] # K: Drying, D: Density, CC: Carbon content
     resultat[0] = total_s
     return resultat
 
 
-def total_emission_calculator(df, recycling_matrix, decay_matrix, n):
+def total_emission_calculator(df, recycling_matrix, decay_matrix, n, K, D, CC):
   """
   This function computes the total emissions from firewood, landfill and, millsite
   """
@@ -233,5 +233,5 @@ def total_emission_calculator(df, recycling_matrix, decay_matrix, n):
 
   #return MSE
   resultat = [sum(x) for x in zip(LFE, FRE, MSE)]
-  resultat =[x*ttdata.K*ttdata.D*ttdata.CC for x in resultat] # K: drying, D: Density, CC: Carbon content
+  resultat =[x*K*D*CC for x in resultat] # K: drying, D: Density, CC: Carbon content
   return resultat
