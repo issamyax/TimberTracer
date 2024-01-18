@@ -18,15 +18,15 @@ loss_allocation = {"furniture": {"fire": 0.15, "particle": 0.1, "paper": 0.2, "m
                    "paper": {"fire": 0, "particle": 0, "paper": 0, "millsite": 0.2}}
 
 # Recycling data on products
-recycling = {"furniture": {'r': 0.1, 'ls': 40 , 'fire': 0.8 , 'landfill': 0.1},
-             "lumber": {'r': 0.1, 'ls': 60, 'fire': 0.8, 'landfill': 0.1},
+recycling = {"furniture": {'r': 0.1, 'ls': 30 , 'fire': 0.8 , 'landfill': 0.1},
+             "lumber": {'r': 0.1, 'ls': 65, 'fire': 0.8, 'landfill': 0.1},
              "paper": {'r': 0.1, 'ls': 1, 'fire': 0.8, 'landfill': 0.1},
              "sawing": {'r': 0.1, 'ls': 50, 'fire': 0.8, 'landfill': 0.1},
              "particle": {'r': 0.1, 'ls': 20, 'fire': 0.8 , 'landfill': 0.1}}
 
 
 # Half-lifetime of "non-main-products"
-decay = {"landfill": 50, "millsite": 25, "fire" : 1}
+decay = {"landfill": 145, "millsite": 5, "fire" : 1}
 
 # Matrix of substitution coefficient. Values are by reference to the dry volume tCO2 / m3 (dry volume)
 substitution_matrix = {"furniture": 0.82,
@@ -82,26 +82,26 @@ management_shelter = {"N_rotation": [1, 1, 1, 1, 1],
 
 #Wood use scenarios
 
-recycling_BAU = {"furniture": {'r': 0.1, 'ls': 40 , 'fire': 0.8 , 'landfill': 0.1},
-            "lumber": {'r': 0.1, 'ls': 60, 'fire': 0.8, 'landfill': 0.1},
+recycling_BAU = {"furniture": {'r': 0.1, 'ls': 30 , 'fire': 0.8 , 'landfill': 0.1},
+            "lumber": {'r': 0.1, 'ls': 65, 'fire': 0.8, 'landfill': 0.1},
             "paper": {'r': 0.1, 'ls': 1, 'fire': 0.8, 'landfill': 0.1},
             "sawing": {'r': 0.1, 'ls': 50, 'fire': 0.8, 'landfill': 0.1},
             "particle": {'r': 0.1, 'ls': 20, 'fire': 0.8 , 'landfill': 0.1}}
 
-recycling_RR10 = {"furniture": {'r': 0.11, 'ls': 40 , 'fire': 0.79 , 'landfill': 0.1},
-            "lumber": {'r': 0.11, 'ls': 60, 'fire': 0.79, 'landfill': 0.1},
+recycling_RR10 = {"furniture": {'r': 0.11, 'ls': 30 , 'fire': 0.79 , 'landfill': 0.1},
+            "lumber": {'r': 0.11, 'ls': 65, 'fire': 0.79, 'landfill': 0.1},
             "paper": {'r': 0.11, 'ls': 1, 'fire': 0.79, 'landfill': 0.1},
             "sawing": {'r': 0.11, 'ls': 50, 'fire': 0.79, 'landfill': 0.1},
             "particle": {'r': 0.11, 'ls': 20, 'fire': 0.79 , 'landfill': 0.1}}
 
-recycling_LS10 = {"furniture": {'r': 0.1, 'ls': 44 , 'fire': 0.8 , 'landfill': 0.1},
-            "lumber": {'r': 0.1, 'ls': 66, 'fire': 0.8, 'landfill': 0.1},
+recycling_LS10 = {"furniture": {'r': 0.1, 'ls': 33 , 'fire': 0.8 , 'landfill': 0.1},
+            "lumber": {'r': 0.1, 'ls': 71.5, 'fire': 0.8, 'landfill': 0.1},
             "paper": {'r': 0.1, 'ls': 1.1, 'fire': 0.8, 'landfill': 0.1},
             "sawing": {'r': 0.1, 'ls': 55, 'fire': 0.8, 'landfill': 0.1},
             "particle": {'r': 0.1, 'ls': 22, 'fire': 0.8 , 'landfill': 0.1}}
 
-recycling_RRLS10 = {"furniture": {'r': 0.11, 'ls': 44 , 'fire': 0.79 , 'landfill': 0.1},
-            "lumber": {'r': 0.11, 'ls': 66, 'fire': 0.79, 'landfill': 0.1},
+recycling_RRLS10 = {"furniture": {'r': 0.11, 'ls': 33 , 'fire': 0.79 , 'landfill': 0.1},
+            "lumber": {'r': 0.11, 'ls': 71.5, 'fire': 0.79, 'landfill': 0.1},
             "paper": {'r': 0.11, 'ls': 1.1, 'fire': 0.79, 'landfill': 0.1},
             "sawing": {'r': 0.11, 'ls': 55, 'fire': 0.79, 'landfill': 0.1},
             "particle": {'r': 0.11, 'ls': 22, 'fire': 0.79, 'landfill': 0.1}}
