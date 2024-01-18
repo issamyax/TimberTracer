@@ -75,7 +75,7 @@ def compute_S(r, init_stock, lifespan, n):
     return S
 
 
-def total_recycling_calculator(df, recycling_matrix, decay_matrix, n):
+def total_recycling_calculator(df, recycling_matrix, decay_matrix, n, K, D, CC):
   """
   This function computes the total annual recycing of all the products given their proper use properties (Recycling rate, Lifespan)
   """
