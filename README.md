@@ -8,6 +8,7 @@ This Python-based model offers a comprehensive analysis of wood products, emphas
 
 - **Carbon Sequestration Analysis**: Assess the amount of carbon stored in various wood products.
 - **Emission Dynamics**: Understand the emissions associated with different stages of wood product utilization.
+- **Substitution effect**: Evaluate the substitution of fossil fuel and energy-intensive materials.
 - **Temporal Insights**: Examine how carbon sequestration and emissions evolve over time.
 - **Modular Design**: Easily extend or modify components to adapt to specific research needs.
 
