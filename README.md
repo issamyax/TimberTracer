@@ -1,7 +1,8 @@
 # TimberTracer: A Comprehensive Framework for the Evaluation of Carbon Sequestration by Forest Management and Substitution of Harvested Wood Products.
 
 
-![image](logo.png){width=40% height=250px}
+
+![]() <img src="logo.png"  width="120">
 
 ## Overview
 
