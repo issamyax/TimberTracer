@@ -1,5 +1,7 @@
 # TimberTracer: A Comprehensive Framework for the Evaluation of Carbon Sequestration by Forest Management and Substitution of Harvested Wood Products.
 
+![image info](logo.png)
+
 ## Overview
 
 This Python-based model offers a comprehensive analysis of wood products, emphasizing the factors influencing carbon pools, emissions, and the temporal dynamics associated with harvested wood products. Its primary goal is to provide insights into both carbon sequestration and emissions over time. For more information, read the paper published at https://doi.org/ [DOI will be available after publication]
