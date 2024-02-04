@@ -2,7 +2,7 @@
 
 
 
-![]() <img src="logo.png"  width="120">
+![]() <img src="logo.png"  width="60">
 
 ## Overview
 
