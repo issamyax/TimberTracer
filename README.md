@@ -45,4 +45,4 @@ This Python-based model offers a comprehensive analysis of wood products, emphas
 4.  **Run the Model**: Execute the main script to initiate the analysis: 	```bash python main.py``` 
     
     
-5.   **Computational Notebook**: Access the [Google Colab notebook](https://colab.research.google.com/drive/1IgFZ-uiq0nNXL8-BeHTE-aecFB2lzV5L?usp=sharing) that demonstrates the usage of the model, step-by-step analysis, and interpretation of results.
+5.   **Computational Notebook**: Access the [![Computational Notebook on Colab](https://colab.research.google.com/github/issamyax/TimberTracer/blob/main/TimberTracer_Usage%20Tutorial.ipynb) that demonstrates the usage of the model, step-by-step analysis, and interpretation of results.
