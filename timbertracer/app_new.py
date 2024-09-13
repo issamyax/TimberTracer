@@ -1,7 +1,6 @@
 #external imports
 import pandas as pd
 
-
 #internal imports
 from ttlibs.dendrometer import dendrometer
 from ttlibs.thinning import perform_thinning
