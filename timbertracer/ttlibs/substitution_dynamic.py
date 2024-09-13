@@ -1,4 +1,6 @@
-
+import scipy.stats as stats
+from ttlibs.recycling import compute_D, compute_R
+import config as ttdata
 
 
 def substitution_factors_dynamic(ref_year, PH):
@@ -59,3 +61,72 @@ def substitution_factors_dynamic(ref_year, PH):
   substitution_df = substitution_df.reset_index(names = 'year')
 
   return substitution_df
+
+
+def energy_sub_dynamic(df, recycling_matrix, substitution_df, decay_matrix, C_CO2, n, K): # n will be affected PP+1 because by definition years = period +1
+  """
+  This function computes the annual dynamic energy substitution
+  """
+  result_list1 = []
+  SEF = substitution_df['fire']
+  #SEF = substitution_matrix['fire']
+  # rendering columns from substitution_df => [year|emiss|furniture|lumber|sawing|particle|fire]
+  listo = substitution_df.columns.tolist()
+  # Iterate through the DataFrame rows
+  for index, row in df.iterrows():
+      product1 = row['product']
+      filtered_substitution_matrix = [x for x in listo if x not in ['year', 'emiss', 'fire']]
+      if product1 in filtered_substitution_matrix:
+          r1 = recycling_matrix[product1]['r']
+          r2 = recycling_matrix[product1]['fire']
+          init_stock1 = row['post_process_volume']*K #K drying
+          lifespan1 = recycling_matrix[product1]['ls']
+          result2 = compute_D(n, r1, init_stock1, lifespan1, r2)
+          result_list1.append(result2)
+
+  # Sum the elements at corresponding positions in the lists
+  sum_result1 = [sum(x) for x in zip(*result_list1)]
+  sum_result1[0] = df[df['product']== 'fire']['post_process_volume'].iloc[0]
+
+
+  # Create a normal distribution
+  distribution1 = stats.norm(decay_matrix["fire"], decay_matrix["fire"] / 3)
+
+  FRE = [0]
+  # Calculate FRE values for indices 2 to (n+1)
+  for i in range(2, n+1):
+    termo = 0
+    for j in range(1, i):
+      termo += sum_result1[j-1] * (distribution1.cdf(i-j) - distribution1.cdf(i-j-1))
+    FRE.append(termo)
+
+  # Multiply the emissions from wood combustion by the time-corresponding substitution factor
+  FRE = [a * b / C_CO2 for a, b in zip(SEF, FRE)]  # SEF: Substitution for Energy, C_CO2: C to CO2 conversion factor
+  return FRE
+
+def material_sub_dynamic(df, recycling_matrix, substitution_df, decay_matrix, C_CO2, n):
+  """
+  This function computes the annual dynamic material substitution
+  """
+  result_list1 = []
+  # rendering columns from substitution_df => [year|emiss|furniture|lumber|sawing|particle|fire]
+  listo = substitution_df.columns.tolist()
+  # Iterate through the DataFrame rows
+  for index, row in df.iterrows():
+      product1 = row['product']
+      filtered_substitution_matrix = [x for x in listo if x not in ['year', 'emiss', 'fire']]
+      if product1 in filtered_substitution_matrix:
+          SMF = substitution_df[product1] # material substitution factor for this product
+          r1 = recycling_matrix[product1]['r']
+          #SC = filtered_substitution_matrix[product1] # To suppress
+          init_stock1 = row['post_process_volume']*K # K drying
+          lifespan1 = recycling_matrix[product1]['ls']
+          result2 = compute_R(n, r1, init_stock1, lifespan1)
+          result2[0] = init_stock1 # the direct product of the stem in the first position
+          result2 = [a * b  for a, b in zip(SMF, result2)] # multiplying by the DF - here the SMF is a product-specific displacement factor and has to be updated during each iteration (product)
+          result_list1.append(result2)
+
+  sum_result1 = [sum(x) for x in zip(*result_list1)] # summation of substitutions from all products
+  sum_result1 = [x/C_CO2 for x in sum_result1]
+
+  return sum_result1
