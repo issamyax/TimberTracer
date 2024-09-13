@@ -10,7 +10,7 @@ from ttlibs.processor import processor
 from ttlibs.recycling_methane import total_stock_calculator
 from ttlibs.recycling_methane import total_emission_calculator
 from ttlibs.recycling_methane import total_recycling_calculator
-from ttlibs.substitution_dynamic import energy_sub
-from ttlibs.substitution_dynamic import material_sub
+from ttlibs.substitution_dynamic import energy_sub_dynamic
+from ttlibs.substitution_dynamic import material_sub_dynamic
 import config as ttdata
 
