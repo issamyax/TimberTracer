@@ -6,7 +6,9 @@
 
 ## Overview
 
-This Python-based model offers a comprehensive analysis of wood products, emphasizing the factors influencing carbon pools, emissions, and the temporal dynamics associated with harvested wood products. Its primary goal is to provide insights into both carbon sequestration and emissions over time. For more information, read the preprint published at https://doi.org/10.1101/2024.01.24.576985
+This Python-based model offers a comprehensive analysis of wood products, emphasizing the factors influencing carbon pools, emissions, and the temporal dynamics associated with harvested wood products. Its primary goal is to provide insights into both carbon sequestration and emissions over time. For more information, please refer to the preprint published at https://doi.org/10.1101/2024.01.24.576985
+
+The Model exists in two versions. The upgrade from Version 1 to Version 2 adressed two important considerations. The new version accounts for the methane release from landfills and enable a dynamic computation of substitution factors proportionnaly to GHG emissions in line with the Paris agreement in climate change. 
 
 ## Features
 
