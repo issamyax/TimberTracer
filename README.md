@@ -1,6 +1,5 @@
 # TimberTracer: A Comprehensive Framework for the Evaluation of Carbon Sequestration by Forest Management and Substitution of Harvested Wood Products.
 
-
 <p align="center">
   <img src="logo.png"  align="center" width="400" height="250" >
 </p>
@@ -26,25 +25,19 @@ This Python-based model offers a comprehensive analysis of wood products, emphas
 
 1. Clone the repository
 2. Navigate to the project directory:
-	```bash
-	cd timbertracer/
-	```
+   ```bash
+   cd timbertracer/
+   ```
 3. Install the required packages:
-	```bash
-	pip install -r requirements.txt
-	```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 
 1.  **Configuration**: Modify the variables in the `config.py` file to customize the analysis parameters according to your requirements.
-    
 2.  **Data Preparation**: Ensure your wood product data is formatted according to the provided examples. TimberTracer can be seamlessly coupled with any forest growth model, whether individual-tree or stand-based level, such as Go+ (Moreaux et al., 2020) or 3DCMCC-FEM (Collalti et al., 2014).
 
 3.  **Data Input**: Modify `__main.py__` to include your parameters in the `app.run_model()` function.
-    
-4.  **Run the Model**: Execute the main script to initiate the analysis: 	```bash python main.py``` 
-
-    
-5.   **Computational Notebook**: Access the [Google Colab Computational Notebook](https://colab.research.google.com/github/issamyax/TimberTracer/blob/main/TimberTracer_Usage%20Tutorial.ipynb) that demonstrates the usage of the model, step-by-step analysis, and interpretation of results. [![Google Colab Computational Notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/issamyax/TimberTracer/blob/main/TimberTracer_Usage%20Tutorial.ipynb)
-
-
+4.  **Run the Model**: Execute the main script to initiate the analysis: `bash python main.py`
+5.  **Computational Notebook**: Access the [Google Colab Computational Notebook](https://colab.research.google.com/github/issamyax/TimberTracer/blob/main/TimberTracer_Usage%20TutorialV2.ipynb) that demonstrates the usage of the model, step-by-step analysis, and interpretation of results. [![Google Colab Computational Notebook](https://colab.research.google.com/github/issamyax/TimberTracer/blob/main/TimberTracer_Usage%20TutorialV2.ipynb)
