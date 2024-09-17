@@ -1,6 +1,7 @@
 import scipy.stats as stats
 from ttlibs.recycling import compute_D, compute_R
 import config as ttdata
+import pandas as pd
 
 
 def substitution_factors_dynamic(ref_year, PH):
@@ -104,7 +105,7 @@ def energy_sub_dynamic(df, recycling_matrix, substitution_df, decay_matrix, C_CO
   FRE = [a * b / C_CO2 for a, b in zip(SEF, FRE)]  # SEF: Substitution for Energy, C_CO2: C to CO2 conversion factor
   return FRE
 
-def material_sub_dynamic(df, recycling_matrix, substitution_df, decay_matrix, C_CO2, n):
+def material_sub_dynamic(df, recycling_matrix, substitution_df, decay_matrix, C_CO2, n, K= ttdata.K):
   """
   This function computes the annual dynamic material substitution
   """

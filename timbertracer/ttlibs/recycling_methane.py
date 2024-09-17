@@ -1,3 +1,6 @@
+import math
+
+import numpy as np
 import config as ttdata
 import scipy.stats as stats
 
@@ -74,7 +77,7 @@ def compute_S(r, init_stock, lifespan, n):
 
     return S
 
-def total_recycling_calculator(df, recycling_matrix, decay_matrix, n):
+def total_recycling_calculator(df, recycling_matrix, decay_matrix, n, K, D, CC):
   """
   This function computes the total annual recycing of all the products given their proper use properties (Recycling rate, Lifespan)
   """
@@ -95,8 +98,7 @@ def total_recycling_calculator(df, recycling_matrix, decay_matrix, n):
 
   return sum_result
 
-
-def total_stock_calculator_ipcc(df, recycling_matrix, decay_matrix, n, t05, L0, f, D, MC, CC, MM_CO2 = 44, MM_C= 12, MM_CH4= 16, GWP_CH4= 28):
+def total_stock_calculator_ipcc(df, recycling_matrix, decay_matrix, n, t05, L0, f, D, MC, CC, MM_CO2 = 44, MM_C= 12, MM_CH4= 16, GWP_CH4= 28, K= ttdata.K):
     """
     This function computes the total annual stock including the product stock, the landfill stock, and the millsite stock
     L0 = 0.047 - Methane generation potential (tCH4 / tWM) - (Augenstein, 1992)
