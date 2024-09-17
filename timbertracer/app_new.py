@@ -6,8 +6,8 @@ from ttlibs.dendrometer import dendrometer
 from ttlibs.thinning import perform_thinning
 from ttlibs.bucking import bucking_allocation
 from ttlibs.processor import processor
-from ttlibs.recycling_methane import total_stock_calculator
-from ttlibs.recycling_methane import total_emission_calculator
+#from ttlibs.recycling_methane import total_stock_calculator
+#from ttlibs.recycling_methane import total_emission_calculator
 from ttlibs.recycling_methane import total_recycling_calculator
 from ttlibs.recycling_methane import total_stock_calculator_ipcc
 from ttlibs.recycling_methane import total_emission_calculator_methane
@@ -50,15 +50,15 @@ def run_model(scale, shape, class_width, tolerance_g, a1, a2, b1, b2, b3, b4, a,
     # Generate list of 0s before the start of projection
     list0 = [0] * RP
     # Compute stock
-    f0 = total_stock_calculator_ipcc(resultat_reallocation, recycling, decay, PP+1, t05, L0, f,  D, MC, CC, MM_CO2, MM_C, MM_CH4, GWP_CH4) #modified from number of years to period from PP -> PP+1
+    f0 = total_stock_calculator_ipcc(resultat_reallocation, recycling, decay, PP+1, t05, L0, f,  D, MC, CC, MM_CO2, MM_C, MM_CH4, GWP_CH4, K) #modified from number of years to period from PP -> PP+1
     # Compute emissions
     f1 = total_emission_calculator_methane(resultat_reallocation, recycling, decay, PP+1, t05, L0, f, D, MC, CC, K, MM_CO2, MM_C, MM_CH4, GWP_CH4) #modified from number of years to period from PP -> PP+1
     # Compute energy substitution
     s1 = energy_sub_dynamic(resultat_reallocation, recycling, df_DSEF_filtered , decay, C_CO2, PP+1, K) #modified from number of years to period from PP -> PP+1
     # Compute material substitution
-    s3 = material_sub_dynamic(resultat_reallocation, recycling, df_DSEF_filtered, decay, C_CO2, PP+1) #modified from number of years to period from PP -> PP+1
+    s3 = material_sub_dynamic(resultat_reallocation, recycling, df_DSEF_filtered, decay, C_CO2, PP+1, K) #modified from number of years to period from PP -> PP+1
     # Total recycling *10
-    rec = total_recycling_calculator(resultat_reallocation, recycling, decay, PP+1) #modified from number of years to period from PP -> PP+1
+    rec = total_recycling_calculator(resultat_reallocation, recycling, decay, PP+1, K, D, CC) #modified from number of years to period from PP -> PP+1
     # Cumulative list of yearly emissions
     f2 = [0]#[s3[0]]
     for i in range(2, PP + 2): # changed from PP+1 => PP+2 because range doesn't account for the last element and the number of years = period + 1
