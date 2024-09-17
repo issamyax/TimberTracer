@@ -40,6 +40,6 @@ The Model exists in two versions. The upgrade from Version 1 to Version 2 adress
 1.  **Configuration**: Modify the variables in the `config.py` file to customize the analysis parameters according to your requirements.
 2.  **Data Preparation**: Ensure your wood product data is formatted according to the provided examples. TimberTracer can be seamlessly coupled with any forest growth model, whether individual-tree or stand-based level, such as Go+ (Moreaux et al., 2020) or 3DCMCC-FEM (Collalti et al., 2014).
 
-3.  **Data Input**: Modify `__main.py__` to include your parameters in the `app.run_model()` function.
+3.  **Data Input**: Modify `__main.py__` to include your parameters in the `app.run_model()` function for the Version 1 or 'app_new.run_model' for the Version 2 
 4.  **Run the Model**: Execute the main script to initiate the analysis: `bash python main.py`
 5.  **Computational Notebook**: Access the [Google Colab Computational Notebook](https://colab.research.google.com/github/issamyax/TimberTracer/blob/main/TimberTracer_Usage%20TutorialV2.ipynb) that demonstrates the usage of the model, step-by-step analysis, and interpretation of results. [![Google Colab Computational Notebook](https://colab.research.google.com/github/issamyax/TimberTracer/blob/main/TimberTracer_Usage%20TutorialV2.ipynb)
