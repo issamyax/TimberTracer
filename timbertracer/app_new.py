@@ -9,8 +9,11 @@ from ttlibs.processor import processor
 from ttlibs.recycling_methane import total_stock_calculator
 from ttlibs.recycling_methane import total_emission_calculator
 from ttlibs.recycling_methane import total_recycling_calculator
+from ttlibs.recycling_methane import total_stock_calculator_ipcc
+from ttlibs.recycling_methane import total_emission_calculator_methane
 from ttlibs.substitution_dynamic import energy_sub_dynamic
 from ttlibs.substitution_dynamic import material_sub_dynamic
+from ttlibs.substitution_dynamic import substitution_factors_dynamic
 import config as ttdata
 
 def run_model(scale, shape, class_width, tolerance_g, a1, a2, b1, b2, b3, b4, a, c, alpha,

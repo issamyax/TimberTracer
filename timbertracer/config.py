@@ -105,3 +105,5 @@ recycling_RRLS10 = {"furniture": {'r': 0.11, 'ls': 33 , 'fire': 0.79 , 'landfill
             "paper": {'r': 0.11, 'ls': 1.1, 'fire': 0.79, 'landfill': 0.1},
             "sawing": {'r': 0.11, 'ls': 55, 'fire': 0.79, 'landfill': 0.1},
             "particle": {'r': 0.11, 'ls': 22, 'fire': 0.79, 'landfill': 0.1}}
+
+dynamic_subs_file = "dynamic_subs.xlsx"
