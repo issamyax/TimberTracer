@@ -42,7 +42,7 @@ The Model exists in two versions. The upgrade from Version 1 to Version 2 adress
 
 3.  **Data Input**: Modify `__main.py__` to include your parameters in the `app.run_model()` function for the Version 1 or `app_new.run_model()` for the Version 2. 
 4.  **Run the Model**: Execute the main script to initiate the analysis: `bash python main.py`
-5.  **Computational Notebook**: Access the [Google Colab Computational Notebook](https://colab.research.google.com/github/issamyax/TimberTracer/blob/main/TimberTracer_Usage%20TutorialV2.ipynb) that demonstrates the usage of the model, step-by-step analysis, and interpretation of results. [![Google Colab Computational Notebook](https://colab.research.google.com/github/issamyax/TimberTracer/blob/main/TimberTracer_Usage%20TutorialV2.ipynb)
+5.  **Computational Notebook**: Access the [Google Colab Computational Notebook](https://colab.research.google.com/github/issamyax/TimberTracer/blob/main/TimberTracer_Usage%20TutorialV2.ipynb) that demonstrates the usage of the model, step-by-step analysis, and interpretation of results. [Google Colab Computational Notebook](https://colab.research.google.com/github/issamyax/TimberTracer/blob/main/TimberTracer_Usage%20TutorialV2.ipynb)
 
 ## References 
 
