@@ -47,3 +47,15 @@ The Model exists in two versions. The upgrade from Version 1 to Version 2 adress
 ## References 
 
 I. Boukhris, A. Collalti, S. Lahssini, D. Dalmonech, F. Nakhle, R. Testolin, M. V. Chiriacò, M. Santini, R. Valentini. TimberTracer: A Comprehensive Framework for the Evaluation of Carbon Sequestration by Forest Management and Substitution of Harvested Wood Products. doi: https://doi.org/10.1101/2024.01.24.576985
+
+## Licence
+TimberTracer 
+Copyright (c) 2024 [Issam Boukhris]
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+Contact: [issamboukhris@gmail.com]
