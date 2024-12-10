@@ -46,6 +46,4 @@ The Model exists in two versions. The upgrade from Version 1 to Version 2 adress
 
 ## References 
 
-1. Alessio Collalti, Lucia Perugini, Monia Santini, Tommaso Chiti, Angelo Nolè, Giorgio Matteucci, Riccardo Valentini, A process-based model to simulate growth in forests with complex structure: Evaluation and use of 3D-CMCC Forest Ecosystem Model in a deciduous forest in Central Italy, Ecological Modelling, Volume 272, 2014, Pages 362-378, ISSN 0304-3800, https://doi.org/10.1016/j.ecolmodel.2013.09.016.
-
-2. Moreaux, V., Martel, S., Bosc, A., Picart, D., Achat, D., Moisy, C., Aussenac, R., Chipeaux, C., Bonnefond, J.-M., Figuères, S., Trichet, P., Vezy, R., Badeau, V., Longdoz, B., Granier, A., Roupsard, O., Nicolas, M., Pilegaard, K., Matteucci, G., … Loustau, D. (2020). Energy, water and carbon exchanges in managed forest ecosystems: Description, sensitivity analysis and evaluation of the INRAE GO+ model, version 3.0. Geoscientific Model Development, 13(12), 5973–6009. https://doi.org/10.5194/gmd-13-5973-2020
+I. Boukhris, A. Collalti, S. Lahssini, D. Dalmonech, F. Nakhle, R. Testolin, M. V. Chiriacò, M. Santini, R. Valentini. TimberTracer: A Comprehensive Framework for the Evaluation of Carbon Sequestration by Forest Management and Substitution of Harvested Wood Products doi: https://doi.org/10.1101/2024.01.24.576985
