@@ -46,4 +46,4 @@ The Model exists in two versions. The upgrade from Version 1 to Version 2 adress
 
 ## References 
 
-I. Boukhris, A. Collalti, S. Lahssini, D. Dalmonech, F. Nakhle, R. Testolin, M. V. Chiriacò, M. Santini, R. Valentini. TimberTracer: A Comprehensive Framework for the Evaluation of Carbon Sequestration by Forest Management and Substitution of Harvested Wood Products doi: https://doi.org/10.1101/2024.01.24.576985
+I. Boukhris, A. Collalti, S. Lahssini, D. Dalmonech, F. Nakhle, R. Testolin, M. V. Chiriacò, M. Santini, R. Valentini. TimberTracer: A Comprehensive Framework for the Evaluation of Carbon Sequestration by Forest Management and Substitution of Harvested Wood Products. doi: https://doi.org/10.1101/2024.01.24.576985
