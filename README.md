@@ -52,6 +52,8 @@ I. Boukhris, A. Collalti, S. Lahssini, D. Dalmonech, F. Nakhle, R. Testolin, M. 
 TimberTracer 
 Copyright (c) 2024 [Issam Boukhris]
 
+The program was developed by Issam Boukhris in frame of his Ph.D. thesis under the supervision of Pr. Riccardo Valentini (University of Tuscia, DIBAF department, Viterbo, Italy)
+
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
